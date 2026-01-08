@@ -1,0 +1,141 @@
+.toast-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 10000;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 400px;
+}
+
+.toast {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.9) 100%);
+  border-radius: 12px;
+  padding: 16px 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  animation: slideInRight 0.5s ease-out;
+  position: relative;
+  overflow: hidden;
+}
+
+.toast:hover {
+  transform: translateX(-5px);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
+}
+
+.toast-success {
+  border-left: 4px solid #2ed573;
+}
+
+.toast-error {
+  border-left: 4px solid #ff4757;
+}
+
+.toast-warning {
+  border-left: 4px solid #ffa502;
+}
+
+.toast-info {
+  border-left: 4px solid #3742fa;
+}
+
+.toast-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.toast-message {
+  flex: 1;
+  font-weight: 500;
+  color: #333;
+  font-size: 14px;
+}
+
+.toast-close {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #666;
+  padding: 0;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+}
+
+.toast-close:hover {
+  background: rgba(0, 0, 0, 0.1);
+  color: #333;
+}
+
+.toast-progress {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #ff4757, #3742fa, #2ed573, #ffa502);
+  animation: progress 3s linear;
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes progress {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 0%;
+  }
+}
+
+/* Dark theme support */
+.dark-theme .toast {
+  background: linear-gradient(135deg, rgba(30, 30, 46, 0.95) 0%, rgba(38, 38, 54, 0.9) 100%);
+  color: #ffffff;
+}
+
+.dark-theme .toast-message {
+  color: #ffffff;
+}
+
+.dark-theme .toast-close {
+  color: #cccccc;
+}
+
+.dark-theme .toast-close:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .toast-container {
+    left: 20px;
+    right: 20px;
+    top: 20px;
+  }
+
+  .toast {
+    max-width: none;
+  }
+}
