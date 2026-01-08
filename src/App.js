@@ -5,7 +5,7 @@ import './styles/App.css';
 function App() {
   return (
     <div className="App">
-      <h1>Real Madrid Player Statistics</h1>
+      <h1>Om - Real Madrid Player Statistics</h1>
       <Dashboard />
     </div>
   );
