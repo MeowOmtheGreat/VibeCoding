@@ -6,7 +6,7 @@
   "scripts": {
     "start": "cross-env NODE_OPTIONS=--openssl-legacy-provider react-scripts start",
     "dev": "cross-env NODE_OPTIONS=--openssl-legacy-provider react-scripts start",
-    "build": "react-scripts build",
+    "build": "cross-env NODE_OPTIONS=--openssl-legacy-provider react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -28,7 +28,6 @@
     "eslint": "^7.14.0",
     "eslint-plugin-react": "^7.27.0"
   },
-  "homepage": "https://yourusername.github.io/real-madrid-stats-app",
   "browserslist": {
     "production": [
       ">0.2%",

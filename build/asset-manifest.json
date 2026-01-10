@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/real-madrid-stats-app/static/css/main.b34bc54e.chunk.css",
+    "main.js": "/real-madrid-stats-app/static/js/main.fc435fcc.chunk.js",
+    "main.js.map": "/real-madrid-stats-app/static/js/main.fc435fcc.chunk.js.map",
+    "runtime-main.js": "/real-madrid-stats-app/static/js/runtime-main.1453bd87.js",
+    "runtime-main.js.map": "/real-madrid-stats-app/static/js/runtime-main.1453bd87.js.map",
+    "static/js/2.d14f3b7f.chunk.js": "/real-madrid-stats-app/static/js/2.d14f3b7f.chunk.js",
+    "static/js/2.d14f3b7f.chunk.js.map": "/real-madrid-stats-app/static/js/2.d14f3b7f.chunk.js.map",
+    "index.html": "/real-madrid-stats-app/index.html",
+    "static/css/main.b34bc54e.chunk.css.map": "/real-madrid-stats-app/static/css/main.b34bc54e.chunk.css.map",
+    "static/js/2.d14f3b7f.chunk.js.LICENSE.txt": "/real-madrid-stats-app/static/js/2.d14f3b7f.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.1453bd87.js",
+    "static/js/2.d14f3b7f.chunk.js",
+    "static/css/main.b34bc54e.chunk.css",
+    "static/js/main.fc435fcc.chunk.js"
+  ]
+}

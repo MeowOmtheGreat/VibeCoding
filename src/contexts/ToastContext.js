@@ -14,16 +14,19 @@ export const useToast = () => {
 export const ToastProvider = ({ children }) => {
   const [toasts, setToasts] = useState([]);
 
-  const addToast = useCallback((message, type = 'info', duration = 3000) => {
+  const addToast = useCallback((toastConfig) => {
     const id = Date.now() + Math.random();
-    const toast = { id, message, type, duration };
+    const toast = {
+      id,
+      title: toastConfig.title || '',
+      message: toastConfig.message || '',
+      type: toastConfig.type || 'info',
+      duration: toastConfig.duration || 4000,
+      autoClose: toastConfig.autoClose !== false,
+      show: true
+    };
 
     setToasts(prev => [...prev, toast]);
-
-    // Auto remove toast after duration
-    setTimeout(() => {
-      removeToast(id);
-    }, duration);
 
     return id;
   }, []);

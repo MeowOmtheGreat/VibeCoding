@@ -66,7 +66,6 @@ function App() {
           }}>
             <p>© 2026 Real Madrid Statistics App | Made with ❤️ for Los Blancos</p>
           </footer>
-          <ToastContainer />
         </div>
       </ToastProvider>
     </ThemeProvider>

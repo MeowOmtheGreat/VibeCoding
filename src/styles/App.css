@@ -2,9 +2,18 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
     min-height: 100vh;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+[data-theme="dark"] body {
+    background: #222222;
     color: #ffffff;
+}
+
+[data-theme="light"] body {
+    background: #ffffff;
+    color: #000000;
 }
 
 .App {
@@ -87,6 +96,69 @@ body {
 }
 
 .sort-options select:hover {
+    background-color: rgba(46, 213, 115, 0.2);
+}
+
+/* Theme-specific styles */
+[data-theme="dark"] .search-bar input {
+    background-color: rgba(0, 0, 0, 0.9);
+    color: #ffffff;
+    border-color: #3742fa;
+}
+
+[data-theme="dark"] .search-bar input:focus {
+    background-color: #000000;
+    border-color: #ff4757;
+}
+
+[data-theme="light"] .search-bar input {
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #333333;
+    border-color: #3742fa;
+}
+
+[data-theme="light"] .search-bar input:focus {
+    background-color: #ffffff;
+    border-color: #ff4757;
+}
+
+[data-theme="dark"] .sort-options label {
+    color: #2ed573;
+}
+
+[data-theme="dark"] .sort-options select {
+    background-color: rgba(46, 213, 115, 0.1);
+    color: #2ed573;
+    border-color: #2ed573;
+}
+
+[data-theme="dark"] .sort-options select:focus {
+    background-color: rgba(255, 71, 87, 0.1);
+    color: #ff4757;
+    border-color: #ff4757;
+}
+
+[data-theme="dark"] .sort-options select:hover {
+    background-color: rgba(46, 213, 115, 0.2);
+}
+
+[data-theme="light"] .sort-options label {
+    color: #2ed573;
+}
+
+[data-theme="light"] .sort-options select {
+    background-color: rgba(46, 213, 115, 0.1);
+    color: #2ed573;
+    border-color: #2ed573;
+}
+
+[data-theme="light"] .sort-options select:focus {
+    background-color: rgba(255, 71, 87, 0.1);
+    color: #ff4757;
+    border-color: #ff4757;
+}
+
+[data-theme="light"] .sort-options select:hover {
     background-color: rgba(46, 213, 115, 0.2);
 }
 
